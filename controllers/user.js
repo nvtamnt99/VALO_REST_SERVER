@@ -20,9 +20,7 @@ exports.signup = (async (req, res) => {
       firstname: firstname,
       lastname: lastname,
       dob: dob,
-      password: hash,
-      type_account: type_account,
-      active: active
+      password: hash
     });
     res.status(200).json('Register success')
   });
