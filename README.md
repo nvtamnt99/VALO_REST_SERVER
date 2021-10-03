@@ -7,10 +7,7 @@
     "firstname": "nguyen",
     "lastname": "tam",
     "dob": "1999-31-12",
-    "password": "12312311",
-    "otp": "123",
-    "type_account": 1,
-    "active": true
+    "password": "12312311"
 }
 # login with Phone: localhost:9000/api/loginPhone
 - test api postman (method POST):
