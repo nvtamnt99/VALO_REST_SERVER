@@ -8,9 +8,11 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors('*'));
 
-const db = require('./models/connect.model');
+const db = require('./models/connect');
 db.sequelize.sync();
 
+//setup router
+require('./routes/user')(app);
 
 
 app.listen(port, function() {
