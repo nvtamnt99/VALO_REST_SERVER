@@ -7,9 +7,12 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors('*'));
-app.use('/api/users', require('./routes/user.route'));
+
+const db = require('./models/connect.model');
+db.sequelize.sync();
+
+
 
 app.listen(port, function() {
-    console.log('Start app');
+    console.log(`Server is running on port: ${port}`);
 })
-
